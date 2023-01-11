@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,13 @@
     <!-- 웹페이지에 아이콘 추가 -->
     <link rel="icon" type="image/png" href="./imgs/favicon.png">
     <script src="https://kit.fontawesome.com/46d2096956.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="main.js" defer></script>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav id="navbar">
@@ -33,15 +37,58 @@
 
     <!-- Home -->
     <section id="home">
-        <img src="./imgs/favicon.png"
-        alt="temp_profile_img"
-        class="home__avatar">
-        <h1 class="home__title">Hello, <br/> I'm AraM</h1>
+        <img src="./imgs/favicon.png" alt="temp_profile_img" class="home__avatar">
+        <h1 class="home__title">Hello, <br /> I'm AraM</h1>
         <h2 class="home__description">i walk slowly but i never walk backward</h2>
         <button class="home__contact">Contact Me</button>
     </section>
+
     <!-- About -->
-    <section id="about"></section>
+    <section id="about">
+        <h1>About me</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Sint illum inventore laborum libero ex animi quam aliquid,
+            excepturi explicabo eveniet molestias, at provident voluptatem veniam fugit facilis,
+            ab eum facere.
+        </p>
+        <div class="about_majors">
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-brands fa-square-js"></i>
+                </div>
+                <div class="major__title">Front-end</div>
+                <div class="major__description">
+                    HTML, CSS, JavaScript, TypeScript, React
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <div class="major__title">Back-end</div>
+                <div class="major__description">
+                    Java, Javascript, NodeJS
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fa-brands fa-python"></i>
+                </div>
+                <div class="major__title">Others</div>
+                <div class="major__description">
+                    Pythons
+                </div>
+            </div>
+        </div>
+
+        <div class="about__jobs">
+            <div class="job">
+                <img src="" alt="" class="job__logo">
+                <p class="job__name">KDT</p>
+                <p class="job__period">lorem</p>
+            </div>
+        </div>
+    </section>
     <!-- Skills -->
     <section id="skills"></section>
     <!-- Works -->
@@ -50,6 +97,7 @@
     <section id="testimonials"></section>
     <!-- Contact -->
     <section id="contact"></section>
-    
+
 </body>
+
 </html>
