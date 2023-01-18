@@ -27,10 +27,26 @@ navbarMenu.addEventListener('click', (event) => {
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
     scrollIntoViews('#contact');
-})
-    
+});
+
+//make home slowly fade when scroll
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () =>{
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
+
+
+
+
 
 function scrollIntoViews(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: 'smooth'}); //behavior is not working on safari
 }
+
