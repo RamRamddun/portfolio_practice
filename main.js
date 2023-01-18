@@ -20,8 +20,17 @@ navbarMenu.addEventListener('click', (event) => {
     if(link == null){
         return;
     }
-    console.log(event.target.dataset);
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: 'smooth'}); //behavior is not working on safari
+    scrollIntoViews(link);
 });
 
+//Handle click "contact me" button
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
+    scrollIntoViews('#contact');
+})
+    
+
+function scrollIntoViews(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: 'smooth'}); //behavior is not working on safari
+}
