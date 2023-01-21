@@ -12,6 +12,7 @@ document.addEventListener('scroll',() => {
     }
 });
 
+
 //handle scrolling when tap navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
@@ -20,7 +21,14 @@ navbarMenu.addEventListener('click', (event) => {
     if(link == null){
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoViews(link);
+});
+
+//navbar toggle button media querry
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 });
 
 //handle click "contact me" button
