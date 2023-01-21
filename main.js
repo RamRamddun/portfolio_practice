@@ -1,6 +1,6 @@
 'use strict';
 
-// Make navbar transparent top and color when scrolling;
+// make navbar transparent top and color when scrolling;
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
@@ -23,7 +23,7 @@ navbarMenu.addEventListener('click', (event) => {
     scrollIntoViews(link);
 });
 
-//Handle click "contact me" button
+//handle click "contact me" button
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
     scrollIntoViews('#contact');
@@ -46,12 +46,12 @@ document.addEventListener('scroll', () =>{
     }
 });
 
-// Handle click arrow up
+// handle click arrow up
 arrowUp.addEventListener('click',() =>{
     scrollIntoViews('#home');
 })
 
-//Projects
+//projects
 const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
@@ -60,6 +60,14 @@ workBtnContainer.addEventListener('click', (e) => {
     if(filter == null){
         return;
     }
+
+    //remove selection and select the newone
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected');
+
+
     projectContainer.classList.add('anime-out');
     setTimeout(() => {
         projects.forEach((project) => {
